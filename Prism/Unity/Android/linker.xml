@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<linker>
+        <!-- No meu projeto utilizei o container Unity (padrão nos templates antigos do Prism) -->
+        <assembly fullname="Microsoft.Practices.Unity">
+            <type fullname="Microsoft.Practices.Unity*" />
+        </assembly>
+ 
+        <assembly fullname="Prism.Unity.Forms">
+            <type fullname="Prism.Unity.Extensions.DependencyServiceExtension" preserve="all">
+                <method name=".ctor" />
+            </type>
+            <type fullname="Prism.Unity.Navigation.UnityPageNavigationService" preserve="all" />
+        </assembly>
+ 
+        <assembly fullname="Prism.Forms">
+            <type fullname="Prism.Common.ApplicationProvider" preserve="all" />
+            <type fullname="Prism.Services.PageDialogService" preserve="all" />
+            <type fullname="Prism.Services.DeviceService" preserve="all" />
+        </assembly>
+</linker>
